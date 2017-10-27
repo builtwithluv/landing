@@ -16,17 +16,27 @@ import LogoSvg from './builtwithluv.svg';
 const Logo = ({
   animate,
   containerStyle,
-}) => (
-  <div className={classNames('Base__Logo', {animate}, containerStyle)}>
+  hideText,
+}) => {
+  const mainStyles = classNames(
+    'Base__Logo',
     {
-      /*
-      * Assure that svg meets accessibility standards by providing title and desc
-      * https://css-tricks.com/accessible-svgs/
-      */
-    }
-    <LogoSvg role="img" />
-  </div>
-);
+      animate,
+      'hide-text': hideText,
+    },
+    containerStyle
+  );
+
+  /*
+  * Assure that svg meets accessibility standards by providing title and desc
+  * https://css-tricks.com/accessible-svgs/
+  */
+  return (
+    <div className={mainStyles}>
+      <LogoSvg role="img" />
+    </div>
+  );
+};
 
 Logo.displayName = "Logo";
 

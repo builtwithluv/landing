@@ -1,4 +1,6 @@
 .Base__Logo {
+  $stroke-dash-size: 800;
+
   width: 300px;
   height: 300px;
 
@@ -14,13 +16,26 @@
     }
   }
 
+  #text {
+    path, rect {
+      fill: none !important;
+      stroke: $RED !important;
+      stroke-width: 0.5px !important;
+    }
+  }
+
+  &.hide-text {
+    #text {
+      visibility: hidden;
+    }
+  }
+
   &.animate {
-    stroke-dasharray: 500;
-    stroke-dashoffset: 500;
+    stroke-dasharray: $stroke-dash-size;
+    stroke-dashoffset: $stroke-dash-size;
 
     #heart {
-      animation: outline 4s 1s forwards,
-                 fill-red 4s 3s forwards;
+      animation: outline 4s 1s forwards;
     }
 
     #hammer {
@@ -30,9 +45,16 @@
       }
     }
 
+    #text {
+      path, rect {
+        animation: outline 4s 3s forwards,
+                   fill-red 3s 3s forwards;
+      }
+    }
+
     @keyframes outline {
       from {
-        stroke-dashoffset: 500;
+        stroke-dashoffset: $stroke-dash-size;
       }
       to {
         stroke-dashoffset: 0;
