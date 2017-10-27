@@ -1,4 +1,5 @@
 import React from 'react';
+import './styles/base.scss';
 
 export default class Root extends React.Component {
   render() {
