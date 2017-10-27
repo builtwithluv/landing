@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import LogoSvg from '../../assets/builtwithluv.svg';
+import LogoSvg from './builtwithluv.svg';
 
 const Logo = ({containerStyle}) => (
   <div className={containerStyle}>
@@ -8,10 +8,10 @@ const Logo = ({containerStyle}) => (
   </div>
 );
 
+Logo.displayName = "Logo";
+
 Logo.propTypes = {
   containerStyle: PropTypes.object,
 };
-
-Logo.displayName = "Logo";
 
 export default Logo;

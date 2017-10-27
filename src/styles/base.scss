@@ -1,87 +1,10 @@
+// Vendor dependencies
 @import '~normalize-scss/sass/normalize';
-
 @include normalize();
 
-$DARK: rgb(24, 22, 25);
-$RED: rgb(158, 32, 23);
-$WHITE: rgb(255, 255, 255);
+// Root dependencies
+@import './variables';
+@import './global';
 
-html {
-  background-color: $DARK;
-}
-
-.logo__svg {
-  #heart {
-    stroke: $RED !important;
-    stroke-width: 5px !important;
-    stroke-dasharray: 500;
-    stroke-dashoffset: 500;
-    animation: 4s outline forwards;
-    animation-name: outline, fill-red;
-    animation-duration: 4s;
-    animation-fill-mode: forwards;
-    animation-delay: 1s, 3s;
-    transform-origin: 50% 50%;
-  }
-
-  #hammer {
-    path {
-      stroke: $WHITE !important;
-      stroke-width: 5px !important;
-      stroke-dasharray: 500;
-      stroke-dashoffset: 500;
-      animation-name: outline, fill-white, hammer-time;
-      animation-duration: 4s, 4s, 1.5s;
-      animation-fill-mode: forwards;
-      animation-direction: alternate;
-      animation-iteration-count: 1, 1, infinite;
-      animation-delay: 0s, 0s, 5.5s;
-      transform-origin: 50% 50%;
-    }
-  }
-
-  @keyframes outline {
-    from {
-      stroke-dashoffset: 500;
-    }
-    to {
-      stroke-dashoffset: 0;
-    }
-  }
-
-  @keyframes fill-red {
-    from {
-      fill: $DARK;
-    }
-    to {
-      fill: $RED;
-    }
-  }
-
-  @keyframes fill-white {
-    from {
-      fill: $DARK;
-    }
-    to {
-      fill: $WHITE;
-    }
-  }
-
-  @keyframes pulse {
-    from {
-      transform: scale(1);
-    }
-    to {
-      transform: scale(0.5);
-    }
-  }
-
-  @keyframes hammer-time {
-    from {
-      transform: rotate(15deg);
-    }
-    to {
-      transform: rotate(-40deg);
-    }
-  }
-}
+// Component dependencies
+@import '../components/base/logo/styles';
