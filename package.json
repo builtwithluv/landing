@@ -27,6 +27,8 @@
   },
   "scripts": {
     "start-dev": "./node_modules/.bin/webpack-dev-server --content-base build/ --hotOnly",
+    "build": "./node_modules/.bin/webpack -p",
+    "deploy": "npm run build && surge --domain http://builtwithluv.io --project ./build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
