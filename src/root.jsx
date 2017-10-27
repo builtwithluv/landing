@@ -5,6 +5,6 @@ import Logo from './components/base/logo';
 
 export default class Root extends React.Component {
   render() {
-    return <Logo />;
+    return <Logo animate />;
   }
 }
