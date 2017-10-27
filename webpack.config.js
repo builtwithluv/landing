@@ -48,6 +48,15 @@ module.exports = {
           }
         }]
       },
+
+      {
+        test: /\.svg$/,
+        use: [{
+          loader: 'babel-loader'
+        }, {
+          loader: 'svg-react-loader'
+        }]
+      }
     ]
   },
 
