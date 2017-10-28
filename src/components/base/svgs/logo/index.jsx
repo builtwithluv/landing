@@ -8,7 +8,7 @@ import classNames from 'classnames';
 /**************************************
  * ASSETS
  **************************************/
-import LogoSvg from './builtwithluv.svg';
+import LogoSvg from './logo.svg';
 
 /**************************************
  * COMPONENT
@@ -16,13 +16,11 @@ import LogoSvg from './builtwithluv.svg';
 const Logo = ({
   animate,
   containerStyle,
-  hideText,
 }) => {
   const mainStyles = classNames(
     'Base__Logo',
     {
       animate,
-      'hide-text': hideText,
     },
     containerStyle
   );
