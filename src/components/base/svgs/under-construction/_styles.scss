@@ -1,0 +1,35 @@
+.Svg__UnderConstruction {
+  rect {
+    stroke: $WHITE !important;
+    stroke-dasharray: 5;
+    animation: svg__under-construction_rect-outline 1s alternate infinite forwards;
+  }
+
+  #chars {
+    path {
+      fill: none !important;
+      stroke: $WHITE !important;
+      stroke-width: 0.1;
+      stroke-dasharray: 1;
+      animation: svg__under-construction_char-outline linear 1s infinite;
+    }
+  }
+
+  @keyframes svg__under-construction_rect-outline {
+    from {
+      stroke-dashoffset: 5;
+    }
+    to {
+      stroke-dashoffset: -5;
+    }
+  }
+
+  @keyframes svg__under-construction_char-outline {
+    from {
+      stroke-dashoffset: 3;
+    }
+    to {
+      stroke-dashoffset: -3;
+    }
+  }
+}
