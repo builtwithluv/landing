@@ -8,17 +8,17 @@ import classNames from 'classnames';
 /**************************************
  * ASSETS
  **************************************/
-import LogoSvg from './logo.svg';
+import ImportedSvg from './logo.svg';
 
 /**************************************
  * COMPONENT
  **************************************/
-const Logo = ({
+const Svg = ({
   animate,
   containerStyle,
 }) => {
   const mainStyles = classNames(
-    'Base__Logo',
+    'Svg__Logo',
     {
       animate,
     },
@@ -31,16 +31,16 @@ const Logo = ({
   */
   return (
     <div className={mainStyles}>
-      <LogoSvg role="img" />
+      <ImportedSvg role="img" />
     </div>
   );
 };
 
-Logo.displayName = "Logo";
+Svg.displayName = "Svg/logo";
 
-Logo.propTypes = {
+Svg.propTypes = {
   animate: PropTypes.bool,
   containerStyle: PropTypes.object,
 };
 
-export default Logo;
+export default Svg;
