@@ -5,6 +5,6 @@ import Logo from './components/base/svgs/logo';
 
 export default class Root extends React.Component {
   render() {
-    return <Logo animate />;
+    return <Logo animate style={{width: 300, height: 300}} />;
   }
 }

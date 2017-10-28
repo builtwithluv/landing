@@ -16,6 +16,7 @@ import ImportedSvg from './logo.svg';
 const Svg = ({
   animate,
   containerStyle,
+  style,
 }) => {
   const mainStyles = classNames(
     'Svg__Logo',
@@ -30,7 +31,7 @@ const Svg = ({
   * https://css-tricks.com/accessible-svgs/
   */
   return (
-    <div className={mainStyles}>
+    <div className={mainStyles} style={style}>
       <ImportedSvg role="img" />
     </div>
   );
@@ -41,6 +42,7 @@ Svg.displayName = "Svg/logo";
 Svg.propTypes = {
   animate: PropTypes.bool,
   containerStyle: PropTypes.object,
+  style: PropTypes.object,
 };
 
 export default Svg;
